@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, BarChart, Bar } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 import { useForm } from 'react-hook-form';
-import { Calendar, TrendingUp, Award, Bell, CreditCard, Settings, Download, Star, Leaf, Droplets, Heart, Sun, Thermometer, Eye, Clock, Scissors, Sprout, Bug, Shield, Zap } from 'lucide-react';
+import { Calendar, TrendingUp, Award, Bell, Settings, Star, Leaf, Droplets, Heart, Sun, Thermometer, Eye, Clock } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 const API_BASE_URL = 'http://localhost:8081/api/v1';
@@ -15,7 +15,7 @@ const CustomerDashboard = () => {
     const [customerData, setCustomerData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [currentPlan, setCurrentPlan] = useState('Plant Lover');
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, reset } = useForm();
 
     useEffect(() => {
         setAnimateCards(true);
@@ -46,12 +46,7 @@ const CustomerDashboard = () => {
         return user.username.split('@')[0] || user.username;
     };
 
-    const getTimeGreeting = () => {
-        const hour = new Date().getHours();
-        if (hour < 12) return 'Good Morning';
-        if (hour < 17) return 'Good Afternoon';
-        return 'Good Evening';
-    };
+
 
     // Real dashboard data
     const dashboardData = {
@@ -142,7 +137,7 @@ const CustomerDashboard = () => {
         ]
     };
 
-    const COLORS = ['#10B981', '#F59E0B', '#EF4444'];
+
 
     const onServiceSubmit = async (data) => {
         try {

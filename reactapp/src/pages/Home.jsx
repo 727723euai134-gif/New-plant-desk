@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import HeroCarousel from '../components/landing/HeroCarousel';
-import AnimatedSectionWrapper from '../components/landing/AnimatedSectionWrapper';
+
 import { heroImages } from '../components/landing/PlaceholderImages';
 import '../styles/theme.css';
 import './Home.css';
 
 const Home = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+
 
   // Hero slides data
   const heroSlides = [

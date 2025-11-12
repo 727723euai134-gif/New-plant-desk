@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
-import { Users, UserCheck, Wrench, Calendar, DollarSign, TrendingUp, Bell, Settings, Eye, CheckCircle, Clock, AlertCircle, Search, ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Users, UserCheck, Calendar, DollarSign, TrendingUp, Bell, Settings, Eye, CheckCircle, Clock, AlertCircle, Search, ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { adminAPI } from '../services/api';
 
 const AdminDashboard = () => {
