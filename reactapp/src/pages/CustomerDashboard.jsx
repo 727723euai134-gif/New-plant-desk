@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { Calendar, TrendingUp, Award, Bell, Settings, Star, Leaf, Droplets, Heart, Sun, Thermometer, Eye, Clock } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
-const API_BASE_URL = 'http://localhost:8081/api/v1';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8081/api/v1';
 
 const CustomerDashboard = () => {
     const { user } = useAuth();
