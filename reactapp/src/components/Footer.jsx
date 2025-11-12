@@ -18,12 +18,12 @@ const Footer = () => {
                     <div>
                         <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">About Us</h3>
                         <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Our Story</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Contact Us</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Careers</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Locate Stores</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Own Grown</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Garden Services & Maintenance</a></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Our Story</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Contact Us</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Careers</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Locate Stores</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Own Grown</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Garden Services & Maintenance</button></li>
                         </ul>
                     </div>
 
@@ -31,13 +31,13 @@ const Footer = () => {
                     <div>
                         <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Customer Care</h3>
                         <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Take The Plant Quiz</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Shipping Policy</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Terms and Conditions</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Privacy Policy</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Track Order</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">FAQs</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Order Related Policy</a></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Take The Plant Quiz</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Shipping Policy</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Terms and Conditions</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Privacy Policy</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Track Order</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">FAQs</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Order Related Policy</button></li>
                         </ul>
                     </div>
 
@@ -45,8 +45,8 @@ const Footer = () => {
                     <div>
                         <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Offers & Rewards</h3>
                         <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Plant Parent Rewards Club</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-green-600 transition-colors">Plant-on-Desk Coupons</a></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Plant Parent Rewards Club</button></li>
+                            <li><button className="text-gray-600 hover:text-green-600 transition-colors text-left">Plant-on-Desk Coupons</button></li>
                         </ul>
                     </div>
 
@@ -124,12 +124,12 @@ const Footer = () => {
                         <div>
                             <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">Download App!</h4>
                             <div className="flex space-x-2">
-                                <a href="#" className="inline-block">
+                                <button className="inline-block">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-10" />
-                                </a>
-                                <a href="#" className="inline-block">
+                                </button>
+                                <button className="inline-block">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="h-10" />
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>

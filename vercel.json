@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd reactapp && npm run build",
+  "outputDirectory": "reactapp/build",
+  "installCommand": "cd reactapp && npm install"
+}
