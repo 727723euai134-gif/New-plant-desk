@@ -162,8 +162,22 @@ public class CustomerController {
     public ResponseEntity<?> updateSubscription(@RequestBody Map<String, Object> request, Authentication auth) {
         System.out.println("Received subscription update request: " + request);
         try {
-            Long customerId = Long.valueOf(request.get("customerId").toString());
             String planName = request.get("planName").toString();
+            
+            // Get user email from JWT token
+            String userEmail = auth.getName();
+            System.out.println("Authenticated user email: " + userEmail);
+            
+            // Find user by email
+            User user = userRepository.findByEmail(userEmail).orElse(null);
+            if (user == null) {
+                return ResponseEntity.badRequest().body(Map.of("error", "User not found for email: " + userEmail));
+            }
+            
+            Long customerId = user.getCustomerId();
+            if (customerId == null) {
+                return ResponseEntity.badRequest().body(Map.of("error", "User is not associated with a customer"));
+            }
             
             // Find customer
             Customer customer = customerRepository.findById(customerId).orElse(null);
@@ -194,6 +208,7 @@ public class CustomerController {
                 return ResponseEntity.ok(Map.of("success", true, "message", "Subscription created successfully", "planName", planName));
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
