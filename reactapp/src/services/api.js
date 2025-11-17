@@ -1,5 +1,5 @@
 // API configuration - will be connected to backend later
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8081/api/v1';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://biophilic-backend.onrender.com/api/v1';
 
 // Authentication API
 const authAPI = {
