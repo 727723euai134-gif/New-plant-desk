@@ -20,6 +20,10 @@ const authAPI = {
         body: JSON.stringify(loginData)
       });
       
+      if (!response) {
+        throw new Error('No response from server');
+      }
+      
       if (response.ok) {
         const data = await response.json();
         console.log('Backend login response:', data);

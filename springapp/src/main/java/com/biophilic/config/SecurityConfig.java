@@ -52,6 +52,7 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(Arrays.asList(
             "http://localhost:3000",
             "https://new-plant-desk.vercel.app",
+            "https://new-plant-desk-finalproject-pbnvtm2ba-yuvasri-ks-projects.vercel.app",
             "https://*.vercel.app"
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
