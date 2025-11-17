@@ -56,4 +56,24 @@ public class UserService {
     public List<User> getUsersByCustomer(Long customerId) {
         return userRepository.findByCustomerId(customerId);
     }
+
+    public void resetTestUserPasswords() {
+        // Reset admin password
+        userRepository.findByEmail("admin@plantondesk.com").ifPresent(user -> {
+            user.setPasswordHash(passwordEncoder.encode("plantondesk123"));
+            userRepository.save(user);
+        });
+        
+        // Reset customer password
+        userRepository.findByEmail("customer1@greencorp.com").ifPresent(user -> {
+            user.setPasswordHash(passwordEncoder.encode("customer123"));
+            userRepository.save(user);
+        });
+        
+        // Reset technician password
+        userRepository.findByEmail("maintenance1@plantondesk.com").ifPresent(user -> {
+            user.setPasswordHash(passwordEncoder.encode("plantondesk123"));
+            userRepository.save(user);
+        });
+    }
 }

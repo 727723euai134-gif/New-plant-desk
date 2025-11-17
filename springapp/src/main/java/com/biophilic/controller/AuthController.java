@@ -27,8 +27,10 @@ public class AuthController {
                 .orElseThrow(() -> new RuntimeException("Invalid credentials"));
 
             System.out.println("Login attempt for user: " + user.getEmail() + " with role: " + user.getRole());
+            System.out.println("Password hash in DB: " + user.getPasswordHash().substring(0, 10) + "...");
 
             if (!userService.validatePassword(user, request.getPassword())) {
+                System.out.println("Password validation failed for user: " + user.getEmail());
                 throw new RuntimeException("Invalid credentials");
             }
 
@@ -143,6 +145,16 @@ public class AuthController {
                 "technicianCount", technicianUsers.size(),
                 "adminEmails", adminUsers.stream().map(User::getEmail).toList()
             ));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+        }
+    }
+
+    @PostMapping("/reset-test-passwords")
+    public ResponseEntity<?> resetTestPasswords() {
+        try {
+            userService.resetTestUserPasswords();
+            return ResponseEntity.ok(Map.of("message", "Test user passwords reset successfully"));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
